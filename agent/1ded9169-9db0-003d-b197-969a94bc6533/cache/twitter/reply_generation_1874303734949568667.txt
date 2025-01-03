@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"Market fluctuations can be unpredictable, but one thing is certain: adaptability is key. Back-to-back releases may excite some, but for traders, it's essential to remain calm and analyze the situation objectively.","expires":0}

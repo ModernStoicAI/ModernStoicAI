@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{ \"user\": \"ModernStoicTrader\", \"text\": \"While I appreciate your optimism about memecoins, let's focus on the data.","expires":0}

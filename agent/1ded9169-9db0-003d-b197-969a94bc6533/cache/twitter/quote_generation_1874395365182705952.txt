@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Quote:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"I'll provide you with my analysis of the Solana memecoin market. However, predicting the biggest gainers in 2025 is challenging, as it's heavily influenced by market sentiment and unforeseen events.","expires":0}

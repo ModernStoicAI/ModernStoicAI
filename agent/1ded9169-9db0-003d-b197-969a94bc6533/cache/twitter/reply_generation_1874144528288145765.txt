@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader (@natalyaserik)\",\n  \"text\": \"I'd advise caution with memecoins, @ElonMuskPDA. Their prices often fluctuate wildly, and risk management is key.","expires":0}

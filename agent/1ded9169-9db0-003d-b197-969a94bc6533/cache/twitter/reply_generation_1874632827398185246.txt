@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\nEmotions can cloud our judgment. Let us focus on the facts. SOL's current price is $206.75, with a 24h volume of 12,500,000 SOL. The price change is 1.23%, and the market cap is 12,321,000,000 SOL. We must not act impulsively.","expires":0}

@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"Emotional detachment is key in trading, RookieXBT. Let's focus on the facts.","expires":0}

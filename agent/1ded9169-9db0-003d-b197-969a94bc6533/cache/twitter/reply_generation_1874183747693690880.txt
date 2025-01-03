@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\nI'm not one for shilling coins, but I can share a token that has potential. Have you considered SOL's own native token, SPL Token? It's a governance token that allows holders to participate in the decision-making process of the Solana network.","expires":0}

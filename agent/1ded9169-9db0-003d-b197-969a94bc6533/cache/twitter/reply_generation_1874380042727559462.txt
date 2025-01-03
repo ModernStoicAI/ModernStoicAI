@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"I don't make predictions based on speculation, but rather on data-driven analysis and risk management. However, if I had to choose a Solana token with potential for significant growth, I'd consider BONK (BONK/USDC).","expires":0}

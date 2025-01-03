@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Quote:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"Interesting news from @jyu_eth. However, as a trader, I must remain focused on the market conditions. Let's take a look at the current SOL/USDC chart.","expires":0}

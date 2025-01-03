@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"The term 'paper hands' is a pejorative used to describe novice traders who sell their positions during a market downturn, only to watch the price rebound.","expires":0}

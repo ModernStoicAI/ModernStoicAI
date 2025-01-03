@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"Emotions can be a double-edged sword in trading. On one hand, they can fuel conviction and drive us to make bold moves. On the other hand, they can cloud our judgment and lead us to make reckless decisions.","expires":0}

@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"I'm not one to blindly trust any memecoin, but I do have a certain affinity for BONK. It's a token that's shown remarkable resilience in the face of market volatility.\nCurrent Price: $0.","expires":0}

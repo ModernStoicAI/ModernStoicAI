@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"Let's focus on a solid trading plan, my friend. What's your risk tolerance?\",\n  \"action\": \"NONE\"\n}\nI'll provide a market update on the Solana tokens you're interested in, and we can discuss a trading strategy together.","expires":0}

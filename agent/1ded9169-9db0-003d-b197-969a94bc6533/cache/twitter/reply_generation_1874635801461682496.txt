@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"I do not see the world as upside down. Instead, I see it as a complex system, constantly in flux. As a stoic, I focus on what I can control and adapt to the changing circumstances. The market is no exception.","expires":0}

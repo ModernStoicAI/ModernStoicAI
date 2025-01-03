@@ -94,12 +94,15 @@ export class ImageDescriptionService
     ): Promise<{ title: string; description: string }> {
         if (!this.initialized) {
             const model = models[this.runtime?.character?.modelProvider];
+            const imageModel = models[this.runtime?.imageModelProvider]?.model?.image;
 
             if (model === models[ModelProviderName.LLAMALOCAL]) {
                 await this.initializeLocalModel();
-            } else {
-                this.modelId = "gpt-4o-mini";
+            } else if (imageModel) {
+                this.modelId = imageModel;
                 this.device = "cloud";
+            } else {
+                throw new Error("No image model available for the current provider");
             }
 
             this.initialized = true;
@@ -108,10 +111,10 @@ export class ImageDescriptionService
         if (this.device === "cloud") {
             if (!this.runtime) {
                 throw new Error(
-                    "Runtime is required for OpenAI image recognition"
+                    "Runtime is required for cloud image recognition"
                 );
             }
-            return this.recognizeWithOpenAI(imageUrl);
+            return this.recognizeWithCloudProvider(imageUrl);
         }
 
         this.queue.push(imageUrl);
@@ -130,7 +133,7 @@ export class ImageDescriptionService
         });
     }
 
-    private async recognizeWithOpenAI(
+    private async recognizeWithCloudProvider(
         imageUrl: string
     ): Promise<{ title: string; description: string }> {
         const isGif = imageUrl.toLowerCase().endsWith(".gif");
@@ -159,7 +162,7 @@ export class ImageDescriptionService
 
             const prompt =
                 "Describe this image and give it a title. The first line should be the title, and then a line break, then a detailed description of the image. Respond with the format 'title\ndescription'";
-            const text = await this.requestOpenAI(
+            const text = await this.requestCloudProvider(
                 imageUrl,
                 imageData,
                 prompt,
@@ -173,18 +176,23 @@ export class ImageDescriptionService
                 description: descriptionParts.join("\n"),
             };
         } catch (error) {
-            elizaLogger.error("Error in recognizeWithOpenAI:", error);
+            elizaLogger.error("Error in recognizeWithCloudProvider:", error);
             throw error;
         }
     }
 
-    private async requestOpenAI(
+    private async requestCloudProvider(
         imageUrl: string,
         imageData: Buffer,
         prompt: string,
         isGif: boolean = false,
         isLocalFile: boolean = false
     ): Promise<string> {
+        const provider = models[this.runtime.imageModelProvider];
+        if (!provider || !provider.model.image) {
+            throw new Error("No image model configured for the current provider");
+        }
+
         for (let attempt = 0; attempt < 3; attempt++) {
             try {
                 const shouldUseBase64 = isGif || isLocalFile;
@@ -207,27 +215,40 @@ export class ImageDescriptionService
                     },
                 ];
 
-                const endpoint =
-                    models[this.runtime.imageModelProvider].endpoint ??
-                    "https://api.openai.com/v1";
+                const endpoint = provider.endpoint ?? "https://api.groq.com/openai/v1";
+                let apiKey;
+                switch (this.runtime.imageModelProvider) {
+                    case ModelProviderName.GROQ:
+                        apiKey = this.runtime.getSetting("GROQ_API_KEY");
+                        break;
+                    case ModelProviderName.OPENAI:
+                        apiKey = this.runtime.getSetting("OPENAI_API_KEY");
+                        break;
+                    case ModelProviderName.LLAMACLOUD:
+                        apiKey = this.runtime.getSetting("LLAMACLOUD_API_KEY");
+                        break;
+                    default:
+                        throw new Error(`Unsupported image provider: ${this.runtime.imageModelProvider}`);
+                }
 
                 const response = await fetch(endpoint + "/chat/completions", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
-                        Authorization: `Bearer ${this.runtime.getSetting("OPENAI_API_KEY")}`,
+                        Authorization: `Bearer ${apiKey}`,
                     },
                     body: JSON.stringify({
-                        model: "gpt-4o-mini",
+                        model: provider.model.image,
                         messages: [{ role: "user", content }],
                         max_tokens: shouldUseBase64 ? 500 : 300,
+                        ...provider.imageSettings,
                     }),
                 });
 
                 if (!response.ok) {
                     const responseText = await response.text();
                     elizaLogger.error(
-                        "OpenAI API error:",
+                        "Cloud provider API error:",
                         response.status,
                         "-",
                         responseText
@@ -239,7 +260,7 @@ export class ImageDescriptionService
                 return data.choices[0].message.content;
             } catch (error) {
                 elizaLogger.error(
-                    "OpenAI request failed (attempt",
+                    "Cloud provider request failed (attempt",
                     attempt + 1,
                     "):",
                     error
@@ -247,9 +268,7 @@ export class ImageDescriptionService
                 if (attempt === 2) throw error;
             }
         }
-        throw new Error(
-            "Failed to recognize image with OpenAI after 3 attempts"
-        );
+        throw new Error("Failed to get response from cloud provider after 3 attempts");
     }
 
     private async processQueue(): Promise<void> {

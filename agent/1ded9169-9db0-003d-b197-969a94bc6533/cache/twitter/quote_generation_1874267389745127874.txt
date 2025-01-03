@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Quote:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"I appreciate your enthusiasm, @Noahhweb3. However, to determine potential, I'd need to see more data. Let's evaluate the 24h volume, liquidity, and price action of this memecoin.","expires":0}

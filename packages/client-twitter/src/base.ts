@@ -620,16 +620,49 @@ export class ClientBase extends EventEmitter {
         await this.cacheMentions(mentionsAndInteractions.tweets);
     }
 
-    async setCookiesFromArray(cookiesArray: any[]) {
-        const cookieStrings = cookiesArray.map(
-            (cookie) =>
+    async setCookiesFromArray(cookiesArray: any[] | string) {
+        let cookies: any[] = [];
+
+        // Parse cookie string if it's a single string
+        if (typeof cookiesArray === 'string') {
+            // Split by semicolon and handle each cookie
+            const cookieParts = cookiesArray.split(';').map(part => part.trim());
+            cookies = cookieParts.map(part => {
+                const [key, value] = part.split('=').map(s => s.trim());
+                if (key && value) {
+                    // Special handling for auth_token and ct0
+                    if (key === 'auth_token' || key === 'ct0') {
+                        return {
+                            key,
+                            value,
+                            domain: '.twitter.com',
+                            path: '/',
+                            secure: true,
+                            httpOnly: key === 'auth_token',
+                            sameSite: 'Lax'
+                        };
+                    }
+                }
+                return null;
+            }).filter(Boolean);
+        } else {
+            cookies = cookiesArray;
+        }
+
+        // Convert cookie objects to strings and only set auth_token and ct0
+        const cookieStrings = cookies
+            .filter(cookie => cookie.key === 'auth_token' || cookie.key === 'ct0')
+            .map(cookie =>
                 `${cookie.key}=${cookie.value}; Domain=${cookie.domain}; Path=${cookie.path}; ${
-                    cookie.secure ? "Secure" : ""
-                }; ${cookie.httpOnly ? "HttpOnly" : ""}; SameSite=${
-                    cookie.sameSite || "Lax"
-                }`
-        );
-        await this.twitterClient.setCookies(cookieStrings);
+                    cookie.secure ? "Secure;" : ""
+                } ${cookie.httpOnly ? "HttpOnly;" : ""} SameSite=${cookie.sameSite}`
+            );
+
+        if (cookieStrings.length > 0) {
+            await this.twitterClient.setCookies(cookieStrings);
+        } else {
+            throw new Error("No valid auth_token or ct0 cookies found");
+        }
     }
 
     async saveRequestMessage(message: Memory, state: State) {

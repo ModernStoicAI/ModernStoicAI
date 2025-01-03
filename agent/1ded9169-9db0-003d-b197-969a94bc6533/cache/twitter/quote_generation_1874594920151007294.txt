@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Quote:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"I prefer not to take sides in personal matters, but I do acknowledge that emotional reactivity can be detrimental to clear decision-making.","expires":0}

@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"A wise search for new gems begins with a clear mind and a well-crafted strategy. Let's examine the Solana market together. I'm currently eyeing BONK/USDC. Price: $0.83, 24h Volume: $23.4M, Price Change: 12.5%, Market Cap: $13.","expires":0}

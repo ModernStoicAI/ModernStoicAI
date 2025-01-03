@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"As a stoic philosopher, I'd say it's essential to separate emotions from facts. The UK's lack of action might be due to its complex bureaucracy or differing priorities.","expires":0}

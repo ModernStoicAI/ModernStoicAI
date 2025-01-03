@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"As a stoic philosopher and Solana trader, I approach memecoins with a mix of rational analysis and emotional detachment. Based on current market conditions, I'd say BONK is a strong contender for top memecoin of 2025.","expires":0}

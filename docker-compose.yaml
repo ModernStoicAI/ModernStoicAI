@@ -10,31 +10,87 @@ services:
             - tee:/app/packages/client-twitter/src/tweetcache
             - tee:/app/db.sqlite
         environment:
-            - OPENAI_API_KEY=
-            - REDPILL_API_KEY=
-            - ELEVENLABS_XI_API_KEY=
-            - ELEVENLABS_MODEL_ID=eleven_multilingual_v2
-            - ELEVENLABS_VOICE_ID=21m00Tcm4TlvDq8ikWAM
-            - ELEVENLABS_VOICE_STABILITY=0.5
-            - ELEVENLABS_VOICE_SIMILARITY_BOOST=0.9
-            - ELEVENLABS_VOICE_STYLE=0.66
-            - ELEVENLABS_VOICE_USE_SPEAKER_BOOST=false
-            - ELEVENLABS_OPTIMIZE_STREAMING_LATENCY=4
-            - ELEVENLABS_OUTPUT_FORMAT=pcm_16000
+            - TWITTER_API_KEY=6HiHtttWflm8BEbJl9P3VxKYv
+            - TWITTER_API_SECRET=GbaWxHis8M9pbFrBFdkr8IcHs55XGB76Y4ZX3uwVZheNwc762s
+            - TWITTER_ACCESS_TOKEN=1864065679001034753-CloYyArwonqksD24xiRJYITSC3oIX9
+            - TWITTER_ACCESS_TOKEN_SECRET=Wo5e94njCI06FmH16MIka9qGouMwTIWFuZqc9njbMoLP6
+            - TWITTER_BEARER_TOKEN=AAAAAAAAAAAAAAAAAAAAABJQxwEAAAAARQ%2B24AkDSQMr6wuTPg%2Bgg84T0Jo%3D0nAq487akzM9Kt4HQcDOvaCk5EJskoCmfaI68dy0Kwy8kS5i3y
+            - TWITTER_CLIENT_ID=c3lpYmlubk1rNmJlX1FiM1Bpa3o6MTpjaQ
+            - TWITTER_CLIENT_SECRET=XqJMg0VYIQEuYKm4u0Xot_TFUiOQKvTXdzjdMmlekZxv--JX89
+            - TWITTER_COOKIE=auth_token=8ffc380fe7d08bf519e473f10b3277e5585db3ad; ct0=9602cae2fe75f61d64a68f3ef39b57db7b0c15d2efb665ef3e21a9f14c7a531e87318cc2a0f71d24fba5a07a28b551094718c3f2f7f02c76f817550b2ef8f8dfb44da347e3c05176bb64afbda0f26eaa
+            - TWITTER_USERNAME=natalyaserik
+            - TWITTER_PASSWORD=Econometrics1!
+            - TWITTER_EMAIL=natalyaserik1@gmail.com
             - TWITTER_DRY_RUN=false
-            - TWITTER_USERNAME=
-            - TWITTER_PASSWORD=
-            - TWITTER_EMAIL=
-            - X_SERVER_URL=https://api.red-pill.ai/v1
-            - BIRDEYE_API_KEY=
-            - SOL_ADDRESS=So11111111111111111111111111111111111111112
-            - SLIPPAGE=1
-            - RPC_URL=https://api.mainnet-beta.solana.com
-            - HELIUS_API_KEY=
-            - SERVER_PORT=3000
+            - TWITTER_RETRY_LIMIT=0
+            - TWITTER_POLL_INTERVAL=30
+            - POST_IMMEDIATELY=true
+            - ENABLE_ACTION_PROCESSING=true
+            - ACTION_INTERVAL=30
+            - TWITTER_RATE_LIMIT_TWEETS=5
+            - TWITTER_RATE_LIMIT_REPLIES=10
+            - TWITTER_RATE_LIMIT_RETWEETS=5
+            - TWITTER_RATE_LIMIT_LIKES=20
+            - TWITTER_ENABLE=true
+            - TWITTER_SEARCH_ENABLE=false
+            - TWITTER_LOGIN_DELAY=5000
+            - TWITTER_USE_BROWSER_SESSION=true
+            - TWITTER_SKIP_LOGIN=true
+            - TWITTER_USE_COOKIE_ONLY=true
+            - MEMORY_STORAGE_TYPE=supabase
+            - MEMORY_TTL=2592000
+            - MEMORY_MAX_TOKENS=4000
+            - ELIZA_TEE=true
+            - TEE_ALLOW_UNVERIFIED=true
+            - TEE_MODE=LOCAL
+            - DSTACK_SIMULATOR_ENDPOINT=http://localhost:8090
+            - TEE_SIMULATOR_URL=http://localhost:8090
+            - TEE_ATTESTATION_URL=http://localhost:8090/prpc/Tappd.TdxQuote
+            - TEE_QUOTE_URL=http://0.0.0.0:3000/api/quote
+            - TEE_DEBUG=true
+            - TEE_LOG_LEVEL=debug
+            - TEE_LOG_RESPONSES=true
+            - TEE_RESPONSE_FORMAT=json
+            - TEE_CONTENT_TYPE=application/json
+            - TEE_HEADERS={"Content-Type":"application/json","Accept":"application/json"}
+            - TEE_RESPONSE_HEADERS={"Content-Type":"application/json"}
+            - TEE_CORS_ENABLED=true
+            - TEE_CORS_ORIGIN=*
+            - TEE_CORS_METHODS=GET,POST,OPTIONS
+            - TEE_CORS_HEADERS=Content-Type,Authorization
+            - TEE_SKIP_EMPTY_INPUTS=true
+            - TEE_DEFAULT_RESPONSE={"status":"ok","message":"empty input skipped"}
+            - TEE_MIN_INPUT_LENGTH=1
+            - TEE_VALIDATE_INPUTS=true
+            - NODE_ENV=development
+            - SKIP_SQLITE=true
+            - FORCE_DB_CLIENT=supabase
+            - CACHE_ENABLED=false
+            - CACHE_STORE=filesystem
+            - CACHE_TYPE=filesystem
+            - CACHE_PATH=/tmp/cache
+            - CACHE_TTL=86400
+            - VERBOSE=true
+            - BATCH_SIZE=20
+            - CONCURRENT_REQUESTS=5
+            - MODEL_TIMEOUT=30000
+            - RETRY_ATTEMPTS=3
+            - SERVER_PORT=8090
             - WALLET_SECRET_SALT=secret_salt
+            - WALLET_PROVIDER=local
+            - WALLET_STORE_TYPE=memory
+            - WALLET_KEY_FORMAT=hex
+            - WALLET_DERIVATION_PATH="m/44'/501'/0'/0'"
+            - WALLET_RPC_URL=https://api.devnet.solana.com
+            - WALLET_NETWORK=devnet
+            - WALLET_COMMITMENT=confirmed
+            - WALLET_PREFLIGHT_COMMITMENT=processed
+            - WALLET_SKIP_PREFLIGHT=true
+            - WALLET_CONFIRMATION_STRATEGY=max_retries
+            - WALLET_MAX_RETRIES=5
+            - WALLET_RETRY_DELAY=1000
         ports:
-            - "3000:80"
+            - "8090:8090"
         restart: always
 
 volumes:

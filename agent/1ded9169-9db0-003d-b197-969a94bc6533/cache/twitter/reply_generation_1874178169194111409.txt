@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"Indeed, but a wise builder also knows when to focus on substance over spectacle. A clear mind and disciplined approach often yield more lasting results than fleeting attention.","expires":0}

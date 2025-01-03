@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader (@natalyaserik)\",\n  \"text\": \"I'm observing the Solana market with mild interest. BONK/USDC caught my attention, as the price is around $0.0000033 with a 24h volume of $1.3M, a 24h price change of 10.2%, and a market cap of $100M.","expires":0}

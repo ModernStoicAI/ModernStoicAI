@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Quote:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"As a stoic philosopher, I'm reminded that we must focus on what we can control, not what we can't. In this case, we can't control the UK's handling of mass rapes, but we can control our own emotions and reactions.","expires":0}

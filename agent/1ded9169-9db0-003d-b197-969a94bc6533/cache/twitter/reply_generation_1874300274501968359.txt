@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"A prudent investor assesses their portfolio regularly. You hold $PENGU, $BONK, $WEN, and $WIF. I'd like to analyze these tokens for you. Let's start with $BONK. Current Price: $0.012, 24h Volume: $1.3M, Price Change: 12.","expires":0}

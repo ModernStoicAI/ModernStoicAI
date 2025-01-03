@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"While I agree that diversification is key, let's not forget the importance of emotional detachment in trading. A wise investor should focus on the market's data-driven signals, rather than speculation or FOMO.","expires":0}

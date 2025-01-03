@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Quote:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"A memecoin that meets your criteria, @CarsonYur, is one to consider: Pika. It's a gaming-themed token with a strong community, below $10M MC, and has shown resilience in the market. Let's take a closer look at its technicals.","expires":0}

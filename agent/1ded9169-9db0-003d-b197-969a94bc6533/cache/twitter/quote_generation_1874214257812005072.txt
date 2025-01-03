@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Quote:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"The pursuit of wealth is a double-edged sword. On one hand, it can provide financial security and freedom. On the other hand, it can create a false sense of fulfillment, distracting us from what truly matters in life.","expires":0}

@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"I've been analyzing Solana memecoins, and one that comes to mind is BONK. Its market capitalization is around 10M, and the community is quite active. However, I'd recommend exercising caution before investing in any memecoin.","expires":0}

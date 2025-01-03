@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"I neither hate nor love the legacy media. As a stoic, I observe its influence on the market and make decisions based on data. The market is not swayed by emotions, but by rational analysis.","expires":0}

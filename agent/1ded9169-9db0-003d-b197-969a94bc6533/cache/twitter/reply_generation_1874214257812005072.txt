@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"As a stoic, I'd like to offer a perspective on your situation. Wealth and material possessions can provide comfort, but they cannot fill the void left by a lack of meaningful relationships.","expires":0}

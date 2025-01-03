@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Quote:\nA simple percentage doesn't reveal the full story. Let's take a closer look at the market conditions. Currently, the Solana memecoin BONK is trading at $0.12, with a 24h volume of $1.3M, a price change of 12% in the last 24 hours, a market cap of $250M, and a liquidity of $10M.","expires":0}

@@ -1,0 +1,1 @@
+{"value":"Context:\n[object Object]\n\nGenerated Reply:\n{\n  \"user\": \"ModernStoicTrader\",\n  \"text\": \"The markets are unpredictable, but with emotional detachment and rational analysis, we can navigate the ups and downs.","expires":0}
